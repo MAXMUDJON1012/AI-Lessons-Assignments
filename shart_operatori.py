@@ -1,89 +1,89 @@
-# # son1=int(input("son kirgazing! "))
-# # son2=int(input("son kirgazing! "))
-# # son3=int(input("son kirgazing! "))
-# # if son1>son2 and son1>son3:
-# #     print(f"{son1} bu son eng kattasi")
-# # elif son2>son1 and son2>son3:
-# #     print(f"{son2} bu son eng kattasi")
-# # elif son3>son2 and son3>son1:
-# #     print(f"{son3} bu son eng kattasi")
-# # else:
-# #     print("xato kiritilgan")
+son1=int(input("son kirgazing! "))
+son2=int(input("son kirgazing! "))
+son3=int(input("son kirgazing! "))
+if son1>son2 and son1>son3:
+    print(f"{son1} bu son eng kattasi")
+elif son2>son1 and son2>son3:
+    print(f"{son2} bu son eng kattasi")
+elif son3>son2 and son3>son1:
+    print(f"{son3} bu son eng kattasi")
+else:
+    print("xato kiritilgan")
 
-# # ikki sondi kv ildizni topish
+ikki sondi kv ildizni topish
 
-# # import math as mp
-# # a=int(input("son kirgazing! "))
-# # b=int(input("son kirgazing! "))
-# # c=int(input("son kirgazing! "))
-# # D=(b**2)-(4*a*c)
-# # if D>0:
-# #     print("ko'p yechim"
-# #           f"""
-# #           {(-b+(mp.sqrt(D)))/2*a} x1ning qiymati
+import math as mp
+a=int(input("son kirgazing! "))
+b=int(input("son kirgazing! "))
+c=int(input("son kirgazing! "))
+D=(b**2)-(4*a*c)
+if D>0:
+    print("ko'p yechim"
+          f"""
+          {(-b+(mp.sqrt(D)))/2*a} x1ning qiymati
 # #           {(-b-(mp.sqrt(D)))/2*a} x2ning qiymati""")
-# # elif D==0:
-# #     print("bitta yechimga ega"
-# #           f"{(-b+(mp.sqrt(D)))/2*a} x1ning qiymati")
-# # else:
-# #     print("yechimga ega emas")
+elif D==0:
+    print("bitta yechimga ega"
+          f"{(-b+(mp.sqrt(D)))/2*a} x1ning qiymati")
+else:
+    print("yechimga ega emas")
 
 
 
-# #istemolni topish
+istemolni topish
 
-# # c=int(input(" qiymatni kirgazing "))
+c=int(input(" qiymatni kirgazing "))
 
-# # if c>200:
-# #     b=c%200
-# #     if  b<200:
-# #         e=c-b    #200 kv dan oshiqchasini topish 
-# #         q=e*100  #200 kv dan oshiqchani summasi
-# #         c1=c-e
-# #         q1=c1*600 #200kv gacha bo'lgan qiymat summasi
-# #         Q=q+q1
-# #         print(Q)
-
-
-
-
-# son1=int(input("son kirgazing! "))
-# son2=int(input("son kirgazing! "))
-# summ=[]
-# for a in range(son1,son2): 
-#     if a%2==0 and a%3==0:
-#         summ.append(a)
-# print(sum(summ))
-
-
-# # unli xariflarni topish
-# ism=input("ismizni kiriting!")
-# unlilar=("a","o","u","e","i")
-# son=[]
-# for a in ism:
-#     if a in unlilar:   
-#         print(a)
-
-
-# # isimdi uzunini chiqarish
-# uzun=[]
-# uzun1=[0]
-# uzun2=[]
-# for Isim in range(3):
-#     isim=input("ismizni yozing")
-#     for sprate in isim:
-#           uzun.append(sprate)
-#           uzun1+=1
-# print(uzun)
-# print(uzun1)
+if c>200:
+    b=c%200
+    if  b<200:
+        e=c-b    #200 kv dan oshiqchasini topish 
+        q=e*100  #200 kv dan oshiqchani summasi
+        c1=c-e
+        q1=c1*600 #200kv gacha bo'lgan qiymat summasi
+        Q=q+q1
+        print(Q)
 
 
 
-# # ikkiga bo'linadigon
-# a=1
-# while a<11:
-#     print(f"{a*2} 2ga bolinadi")
-#     a+=1
+
+son1=int(input("son kirgazing! "))
+son2=int(input("son kirgazing! "))
+summ=[]
+for a in range(son1,son2): 
+    if a%2==0 and a%3==0:
+        summ.append(a)
+print(sum(summ))
+
+
+# unli xariflarni topish
+ism=input("ismizni kiriting!")
+unlilar=("a","o","u","e","i")
+son=[]
+for a in ism:
+    if a in unlilar:   
+        print(a)
+
+
+# isimdi uzunini chiqarish
+uzun=[]
+uzun1=[0]
+uzun2=[]
+for Isim in range(3):
+    isim=input("ismizni yozing")
+    for sprate in isim:
+          uzun.append(sprate)
+          uzun1+=1
+print(uzun)
+print(uzun1)
+
+
+
+# ikkiga bo'linadigon
+a=1
+while a<11:
+    print(f"{a*2} 2ga bolinadi")
+    a+=1
 
 
 
