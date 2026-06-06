@@ -1,0 +1,228 @@
+1. Shaxsiy Ma'lumotlar Tizimi (Input, If-Elif-Else, List, Dictionary)
+print("Shaxsiy ma'lumotlaringizni kiriting!")
+
+malumot = {}
+
+ism = input("Ismingizni kiriting: ").strip()
+
+while True:
+    try:
+        yosh = int(input("Yoshingizni kiriting: "))
+        break
+    except ValueError:
+        print("Xato! Yosh faqat raqam bo'lishi kerak. Qayta kiriting.")
+
+manzil = input("Manzilingizni kiriting: ").strip()
+telefon = input("Telefon raqamingizni kiriting: ").strip()
+
+if yosh < 18:
+    print("Yosh chegarasi mavjud, siz bu saytdan foydalana olmaysiz!")
+else:
+    if ism == "" or manzil == "" or telefon == "":
+        print("Ma'lumot to'liq emas")
+    else:
+        malumot.update({
+            "ism": ism,
+            "yosh": yosh,
+            "manzil": manzil,
+            "telefon": telefon
+        })
+
+        print("Sizning ma'lumotlaringiz:", malumot)
+
+
+
+
+import math as mp
+
+while True:
+    while True:
+        try:
+            son1=float(input("birinchi sondi kiriting "))
+            son2=float(input("ikkinchi sondi kiriting "))
+            break
+        except ValueError:
+            print("Xato! Sonlar faqat raqam bo'lishi kerak. Qayta kiriting.")
+    kopaytrish1=son1*son2
+    ayrish1=son1-son2
+    bolish1=son1//son2
+    qoshish1=son2+son1
+    
+    kopaytrish = input("Kopaytrish amalini bajarilsinmi? (ha/yoq) ").strip().lower()
+    bolish = input("Bolish amalini bajarilsinmi? (ha/yoq) ").strip().lower()
+    ayrish = input("Ayrish amalini bajarilsinmi? (ha/yoq) ").strip().lower()
+    qoshish = input("Qoshish amalini bajarilsinmi? (ha/yoq) ").strip().lower()
+    
+    if kopaytrish != "ha" and bolish != "ha" and ayrish != "ha" and qoshish != "ha":
+        print("Amal tanlang!")
+        continue
+    if ayrish == "ha":
+        print(f"Ayrish natijasi: {ayrish1}")
+    if kopaytrish == "ha":
+        print(f"Ko'paytrish natijasi: {kopaytrish1}")
+    if bolish == "ha":
+        print(f"Bo'lish natijasi: {bolish1}")
+    if qoshish == "ha":
+        print(f"Qo'shish natijasi: {qoshish1}")
+        
+    stop=input("To'xtatasizmi? ha/yoq ").strip().lower()
+    if stop=="ha":
+        break
+    else:
+        continue
+
+
+
+odamlar = {} 
+sorash_soni=int(input("Nechta insondi ro'yxati kerak"))
+for i in range(1,6):
+    ism = input(f"{i}-odam ismi: ").strip()
+    yosh = int(input(f"{ism}ning yoshi: "))
+    odamlar[ism] = yosh
+for ism, yosh in sorted(odamlar.items(), key=lambda x: x[1], reverse=True):
+    print(f"{ism}: {yosh} yosh")
+
+
+
+
+n = int(input("Fibonacci sonlari qaysi raqamgacha? "))
+fib = []
+a, b = 0, 1
+while a <= n:
+    fib.append(a)
+    a, b = b, a + b
+print("Fibonacci ketma-ketligi:", *fib)
+
+
+
+
+
+
+n = int(input("Nechta mahsulot kiritmoqchisiz? "))
+mahsulotlar = {}
+jami = 0
+for i in range(1, n+1):
+    print(f"\n{i}-mahsulot:")
+    nom = input("Nomi: ").strip()
+    while True:
+        try:
+            narx = int(input("Narxi (so'm): "))
+            break
+        except ValueError:
+            print("Iltimos, faqat raqam kiriting")
+    if narx > 100000:
+        chegirma_narx = narx * 0.9
+        print(f"Chegirma 10%: {narx:,} → {int(chegirma_narx):,} so'm")
+    else:
+        chegirma_narx = narx
+    mahsulotlar[nom] = chegirma_narx
+    jami += chegirma_narx
+print("\nSizning xaridingiz:")
+for nom, narx in mahsulotlar.items():
+    print(f"• {nom} — {narx:,} so'm")
+
+print(f"\nJami summa: {jami:,} so'm")
+
+
+
+raqamlar = []
+
+print("10 ta raqam kiriting:")
+
+for i in range(1, 11):
+    while True:
+        try:
+            son = int(input(f"{i}-raqam: "))
+            raqamlar.append(son)
+            break
+        except ValueError:
+            print("Faqat butun son kiriting!")
+takrorlanmas = list(set(raqamlar))
+
+print("\nSiz kiritgan raqamlar:", raqamlar)
+print("Takrorlanmas raqamlar:", takrorlanmas)
+
+
+
+talabalar = {}
+print("5 ta talaba ismi va bahosini kiriting:\n")
+for i in range(1, 6):
+    ism = input(f"{i}-talaba ismi: ").strip()
+    while True:
+        try:
+            baho = int(input(f"{ism}ning bahosi (0-100): "))
+            if 0 <= baho <= 100:
+                talabalar[ism] = baho
+                break
+            else:
+                print("Bahoni 0 dan 100 gacha kiriting!")
+        except ValueError:
+            print("Faqat butun son kiriting!")
+print("\n" + "="*40)
+print("Talabalar bahosi va izohi:")
+print("-"*40)
+for ism, baho in talabalar.items():
+    if baho > 90:
+        izoh = "A'lo baho"
+    elif baho > 80:
+        izoh = "Yaxshi baho"
+    elif baho > 70:
+        izoh = "Qoniqarli"
+    else:
+        izoh = "Yomon baho"
+    print(f"{ism:.<20} {baho:>3} → {izoh}")
+
+
+
+
+juft_sonlar = []
+toq_sonlar = []
+print("10 ta raqam kiriting (manfiy sonlar hisobga olinmaydi):\n")
+for i in range(1, 11):
+    while True:
+        try:
+            son = int(input(f"{i}-raqam: "))
+            break
+        except ValueError:
+            print("Iltimos, butun son kiriting")
+    if son < 0:
+        continue
+    if son % 2 == 0:
+        juft_sonlar.append(son)
+    else:
+        toq_sonlar.append(son)
+print("\n" + "-" * 40)
+print("Juft sonlar:", juft_sonlar)
+print("Toq sonlar :", toq_sonlar)
+print(f"\nJuft sonlar soni: {len(juft_sonlar)} ta")
+print(f"Toq sonlar soni : {len(toq_sonlar)} ta")
+
+
+
+sozlar = []
+
+print("Kamida 10 ta so'z kiriting (tugatish uchun 'tugat' deb yozing):\n")
+
+while True:
+    soz = input("So'z: ").strip().lower()
+    if soz == "tugat":
+        break
+    if soz:  # bo'sh kiritishni oldini olish
+        sozlar.append(soz)
+
+# Takrorlangan so'zlarni topish
+takrorlanganlar = set()
+
+for soz in sozlar:
+    if sozlar.count(soz) > 1:
+        takrorlanganlar.add(soz)
+
+# Natija
+print("\nTakrorlangan so'zlar:")
+if takrorlanganlar:
+    for soz in sorted(takrorlanganlar):
+        print("→", soz)
+else:
+    print("Hech qanday so'z takrorlanmagan")
+
+
